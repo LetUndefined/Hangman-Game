@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="solution.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>HANGMAN</h1>
+    <main>
+      <div>
+        <svg height="280" width="240" stroke="black" stroke-width="4">
+          <circle id="head" cx="150" cy="80" r="20" />
+          <line id="rope" x1="150" y1="20" x2="150" y2="60" />
+          <line id="torso" x1="150" y1="100" x2="150" y2="150" />
+          <line id="arm_left" x1="150" y1="120" x2="120" y2="140" />
+          <line id="arm_right" x1="150" y1="120" x2="180" y2="140" />
+          <line id="leg_left" x1="150" y1="150" x2="130" y2="190" />
+          <line id="leg_right" x1="150" y1="150" x2="170" y2="190" />
+          <line id="pole_top" x1="50" y1="20" x2="150" y2="20" />
+          <line id="pole_left" x1="50" y1="250" x2="50" y2="20" />
+          <line id="floor" x1="20" y1="250" x2="220" y2="250" />
+        </svg>
+        <p id="mistakes-text">Fouten: 0</p>
+        <p id="mistakes-array">Incorrecte letters:</p>
+      </div>
+      <div id="word-container">
+        <div>
+          <p id="word"></p>
+          <input type="text" id="guess" />
+          <button id="submit">Raad</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
